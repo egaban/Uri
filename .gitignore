@@ -1,4 +1,4 @@
-entrada
-saida
-a.out
-
+*
+!*.c
+!*.cpp
+!*.py

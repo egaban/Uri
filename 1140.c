@@ -3,19 +3,23 @@
 
 #define MAX_STRING 1050
 
+char ToMaiscula(char c) {
+    return (c >= 'a')? c - ' ' : c; 
+}
+
 int IsTautograma(char s[MAX_STRING]) {
+    char letra = ToMaiscula(s[0]);
     size_t i = 1;
-    char primeiraletra = s[0];
 
     while (s[i]) {
-        while (s[i] != ' ' || s[i])
+        while (s[i] != ' ' && s[i])
             i++;
         if (s[i] == ' ') {
-            if(s[++i] != primeiraletra)
+            if (ToMaiscula(s[++i]) != letra)
                 return 0;
         }
     }
-
+    
     return 1;
 }
 
@@ -23,7 +27,7 @@ int main(void) {
     char s[MAX_STRING];
 
     while (1) {
-        scanf("%[^\n]", s);
+        scanf(" %[^\n]", s);
 
         if (!strcmp("*", s))
             break;

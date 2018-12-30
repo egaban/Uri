@@ -30,14 +30,20 @@ int main(void) {
 }
 
 int Knapsack(pedido p[], int capacidade, int n) {
-    if (!n || !capacidade)
-        return 0;
-    else if (p[n-1].quantidade > capacidade)
-        return Knapsack(p, capacidade, n-1);
-    else {
-        int a = p[n-1].tempo + Knapsack(p, capacidade - p[n-1].quantidade, n-1);
-        int b = Knapsack(p, capacidade, n-1);
+    int i, j;
+    int K[n+1][capacidade+1];
 
-        return max(a, b);
+    for (i = 0; i <= capacidade; ++i)
+        K[0][i] = 0;
+    
+    for (i = 1; i <= n; ++i) {
+        for (j = 0; j <= capacidade; ++j) {
+            if (p[i-1].quantidade > j)
+                K[i][j] = K[i-1][j];
+            else
+                K[i][j] = max(K[i-1][j], p[i-1].tempo + K[i-1][j-p[i-1].quantidade]);
+        }
     }
+    
+    return K[n][capacidade];
 }

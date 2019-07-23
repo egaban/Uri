@@ -1,20 +1,18 @@
 #include <iostream>
 #include <map>
-#include <string>
 
 int main(void) {
-    std::map<std::string, int> killers, mortos;
-    std::map<std::string, int>::iterator it;
-    std::string killer, killed;
+  std::map<std::string, int> murderers;
+  std::map<std::string, bool> dead;
+  std::string killer, killed;
 
-    while (std::cin >> killer >> killed) {
-        killers[killer]++;
-        mortos[killed] = 1;
-    }
+  while (std::cin >> killer >> killed) {
+    murderers[killer]++;
+    dead[killed] = true;
+  }
 
-    std::cout << "HALL OF MURDERERS" << std::endl;
-    for (it = killers.begin(); it != killers.end(); it++) {
-        if (!mortos[it->first])
-            std::cout << it->first << " " << it->second << std::endl;
-    }
+  std::cout << "HALL OF MURDERERS" << std::endl;
+  for (auto i : murderers)
+    if (!dead[i.first])
+      std::cout << i.first << " " << i.second << "\n";
 }

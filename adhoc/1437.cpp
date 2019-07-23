@@ -10,6 +10,8 @@ char ProximaDirecao(char atual, char sentido) {
             return (sentido == 'D')? 'S' : 'N';
         case 'S':
             return (sentido == 'D')? 'O' : 'L';
+        default:
+            return 0;
     }
 }
 

@@ -1,6 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 int Diferencas(std::string a, std::string b);
+inline size_t abs(size_t a);
 
 int main(void) {
     int n;
@@ -10,7 +11,7 @@ int main(void) {
 
     while (n--) {
         std::cin >> entrada;
-        
+
         if (entrada == "one" || Diferencas(entrada, "one") == 1)
             std::cout << 1;
         else if (entrada == "two" || Diferencas(entrada, "two") == 1)
@@ -21,6 +22,11 @@ int main(void) {
     }
 
     return 0;
+}
+
+inline size_t abs(size_t a)
+{
+    return (a > 0)? a : -a;
 }
 
 int Diferencas(std::string a, std::string b) {

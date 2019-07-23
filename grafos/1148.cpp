@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+
 #define MAX_V 500
 
 void CalcularDist(short g[MAX_V][MAX_V], short a, short b, int n);
@@ -36,10 +37,11 @@ int main(void) {
 }
 
 void CalcularDist(short g[MAX_V][MAX_V], short a, short b, int n) {
-    bool visitado[n] = {0};
+    bool visitado[n];
     short distancia[n];
     short atual = a;
 
+    memset(visitado, 0, n);
     for (int i = 0; i < n; ++i) 
         distancia[i] = SHRT_MAX;
     distancia[a] = 0;

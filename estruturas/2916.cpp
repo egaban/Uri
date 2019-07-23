@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 #define MOD 1000000007
 
@@ -27,4 +27,3 @@ int main(void) {
 
 	return 0;
 }
-

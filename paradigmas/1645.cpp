@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 void ReceberSequencia(int v[], int n);
 long long CalcularSubsequencias(int v[], int n, int k);
@@ -14,9 +14,7 @@ int main(void) {
 		std::cout << CalcularSubsequencias(v, n, k) << std::endl;
 		std::cin >> n >> k;
 	}
-
-
-
+	
 	return 0;
 }
 

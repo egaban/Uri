@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 #define MAX 10000
 
@@ -13,7 +13,7 @@ int main(void)
     while (std::cin >> n >> r)
     {
         memset(voltou, 0, n);
-        
+
         for (int i = 0; i < r; ++i)
         {
             std::cin >> x;

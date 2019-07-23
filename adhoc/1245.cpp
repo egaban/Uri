@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 int main(void) {
     int botas[2][31];

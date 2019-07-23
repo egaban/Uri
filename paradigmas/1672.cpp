@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <cmath>
 
 void GerarPotencias2(int v[]);
 int PosicaoSegura(int n, int p[]);

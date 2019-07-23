@@ -1,4 +1,4 @@
-#include "bits/stdc++.h"
+#include <iostream>
 
 #define MAX_PROJETEIS 50
 #define max(a, b) (a > b)? a : b
@@ -48,5 +48,5 @@ int Knapsack(projetil v[], int n, int capacidade) {
         }
     }
 
-    return K[n][capacidade];    
+    return K[n][capacidade];
 }

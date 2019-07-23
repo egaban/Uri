@@ -8,4 +8,4 @@ all: $(BIN_NAMES)
 %.out: %.cpp
 	$(COMPILE)
 clean:
-	rm -v *.out
+	rm -v */*.out
